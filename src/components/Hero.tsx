@@ -208,6 +208,25 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
+      {/* Upload the background video as public/videos/hero-background.mp4. */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover opacity-35 pointer-events-none"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+        onError={(event) => {
+          event.currentTarget.style.display = "none";
+        }}
+      >
+        <source
+          src={`${import.meta.env.BASE_URL}videos/hero-background.mp4`}
+          type="video/mp4"
+        />
+      </video>
+
       {/* Background effects */}
       <div className="absolute inset-0 bg-grid-pattern pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent/[0.03] rounded-full blur-[150px] pointer-events-none" />
