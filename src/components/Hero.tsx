@@ -208,7 +208,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Upload the background video as public/videos/hero-background.mp4. */}
+      {/* Upload the background video as videos/hero-background.mp4. */}
       <video
         className="absolute inset-0 h-full w-full object-cover opacity-35 pointer-events-none"
         autoPlay

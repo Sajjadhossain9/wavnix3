@@ -13,7 +13,15 @@ export default defineConfig({
   // Relative asset URLs work on both the GitHub Pages project URL and a
   // custom domain such as wavnix.com.
   base: "./",
+  publicDir: path.resolve(__dirname, "videos"),
   plugins: [react(), tailwindcss(), viteSingleFile()],
+  build: {
+    rollupOptions: {
+      input: {
+        index: path.resolve(__dirname, "index.source.html"),
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
